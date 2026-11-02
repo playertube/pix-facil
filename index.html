@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#087f5b">
+  <meta name="description" content="Monte valores para Pix de forma simples, rápida e acessível.">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./style.css">
+  <title>Pix Fácil</title>
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <div class="brand-mark" aria-hidden="true">P</div>
+      <div><h1>Pix Fácil</h1><p>Monte o valor sem complicação</p></div>
+      <span id="connection" class="status" aria-live="polite">Online</span>
+    </header>
+
+    <section class="amount-card" aria-labelledby="amount-title">
+      <p id="amount-title" class="eyebrow">VALOR DO PIX</p>
+      <output id="amount" class="amount" aria-live="polite">R$ 0,00</output>
+      <p id="amountWords" class="amount-hint">Escolha os algarismos abaixo</p>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading"><h2>Escolha os algarismos</h2><span>Toque para selecionar</span></div>
+      <div class="digits">
+        <label>Milhar<select id="thousands" aria-label="Milhar"></select></label>
+        <label>Centena<select id="hundreds" aria-label="Centena"></select></label>
+        <label>Dezena<select id="tens" aria-label="Dezena"></select></label>
+        <label>Unidade<select id="units" aria-label="Unidade"></select></label>
+      </div>
+      <div class="section-heading cents-heading"><h2>Centavos</h2><span>Escolha uma opção</span></div>
+      <div class="cents" id="centButtons">
+        <button type="button" data-cents="0" class="cent active">00</button>
+        <button type="button" data-cents="5" class="cent">05</button>
+        <button type="button" data-cents="10" class="cent">10</button>
+        <button type="button" data-cents="25" class="cent">25</button>
+        <button type="button" data-cents="50" class="cent">50</button>
+        <button type="button" data-cents="75" class="cent">75</button>
+        <button type="button" data-cents="99" class="cent">99</button>
+      </div>
+    </section>
+
+    <section class="actions" aria-label="Ações">
+      <button id="undo" class="secondary" type="button">↶ Desfazer</button>
+      <button id="clear" class="secondary danger" type="button">Limpar</button>
+      <button id="copy" class="primary" type="button">▢ Copiar valor</button>
+    </section>
+    <p id="message" class="message" role="status" aria-live="polite"></p>
+    <footer>Pix Fácil não realiza transferências. Apenas monta e copia valores.</footer>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>

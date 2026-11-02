@@ -1,0 +1,18 @@
+PIX FÁCIL — PRIMEIRA VERSÃO PWA
+
+Arquivos:
+- index.html, style.css e app.js: aplicativo
+- manifest.json: configuração de instalação PWA
+- service-worker.js: cache para funcionamento offline
+- icons/: ícones do aplicativo
+
+IMPORTANTE:
+1. O PWA precisa ser publicado em HTTPS para instalação e Service Worker.
+2. Depois de publicar, abra a URL no Chrome Android e use o menu ⋮ > Instalar app ou Adicionar à tela inicial.
+3. Abra uma vez com internet para o Service Worker armazenar os arquivos. Depois teste o modo avião.
+4. O cache desta versão é pix-facil-v1. Ao publicar atualizações futuras, aumente o número da versão no service-worker.js.
+5. Esta versão apenas monta e copia o valor; não faz pagamentos.
+
+Hospedagem:
+Os arquivos deste ZIP devem ficar na pasta pública do site (por exemplo, public/ no template Static Website do Wasmer).
+Consulte: https://docs.wasmer.io/edge/guides/static-site/
